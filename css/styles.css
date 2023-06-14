@@ -44,16 +44,78 @@ img {
 /* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+.wall {
+  background-image: url('../img/wall-bricks.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.akfa-rom {
+  border: 20px ridge rgb(165, 61, 42);
+  box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  background-image: url('../img/interior-design.png');
+  background-size: cover;
+  background-position: left center;
+}
+
+.qanot {
+  border: 20px ridge rgb(165, 61, 42);
+  width: 300px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.5s ease;
+}
+
+.chap-qanot {
+  /* chap tomon oshiq-moshig'i */
+  transform-origin: left center;
+}
+
+.ong-qanot {
+  /* o'ng tomon oshiq-moshig'i */
+  transform-origin: right center;
+}
+
+.akfa-rom:hover .chap-qanot {
+  transform: perspective(2000px) rotateY(-135deg);
+}
+.akfa-rom:hover .ong-qanot {
+  transform: perspective(2000px) rotateY(135deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* RETINA BACKGROUNDS */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {}
